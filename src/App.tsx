@@ -23,4 +23,4 @@ const App = () => (
 
 export default App;
 
-//goto: 14 Getting optimize images
+//goto: 17 Fetching the genres
