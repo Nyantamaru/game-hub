@@ -1,11 +1,11 @@
-import { SimpleGrid, Text, Skeleton } from '@chakra-ui/react';
+import { SimpleGrid, Text } from '@chakra-ui/react';
 import useGames from '../hooks/useGames';
 import GameCard from './GameCard';
-import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
+import GameCardSkeleton from './GameCardSkeleton';
 
-const GrameGrid = () => {
-  const { games, error, isLoading } = useGames();
+const GameGrid = () => {
+  const { data, error, isLoading } = useGames();
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
@@ -17,13 +17,13 @@ const GrameGrid = () => {
         spacing={10}
       >
         {isLoading &&
-          skeletons.map((skeleton) => (
-            <GameCardContainer>
+          skeletons.map((skeleton, index) => (
+            <GameCardContainer key={index}>
               <GameCardSkeleton key={skeleton} />
             </GameCardContainer>
           ))}
-        {games.map((game) => (
-          <GameCardContainer>
+        {data.map((game) => (
+          <GameCardContainer key={game.id}>
             <GameCard key={game.id} game={game} />
           </GameCardContainer>
         ))}
@@ -32,4 +32,4 @@ const GrameGrid = () => {
   );
 };
 
-export default GrameGrid;
+export default GameGrid;
