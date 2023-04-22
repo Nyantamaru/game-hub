@@ -30,4 +30,4 @@ const App = () => (
 
 export default App;
 
-//goto: 17 Fetching the genres
+//goto: 21 Filtering games by genre
