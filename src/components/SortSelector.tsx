@@ -1,5 +1,5 @@
-import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
-import { BsChevronDown } from 'react-icons/bs';
+import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react";
+import { BsChevronDown } from "react-icons/bs";
 
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;
@@ -8,12 +8,12 @@ interface Props {
 
 const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   const sortOrders = [
-    { value: '', label: 'Relevance' },
-    { value: '-added', label: 'Date added' },
-    { value: 'name', label: 'Name' },
-    { value: '-released', label: 'Release date' },
-    { value: '-metacritic', label: 'Popularity' },
-    { value: '-rating', label: 'Average rating' },
+    { value: "", label: "Relevance" },
+    { value: "-added", label: "Date added" },
+    { value: "name", label: "Name" },
+    { value: "-released", label: "Release date" },
+    { value: "-metacritic", label: "Popularity" },
+    { value: "-rating", label: "Average rating" },
   ];
 
   const currentSortOrder = sortOrders.find(
@@ -25,10 +25,10 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
       <MenuButton
         as={Button}
         rightIcon={<BsChevronDown />}
-        color={currentSortOrder?.label ? '#48BB78' : 'white'}
+        color={currentSortOrder?.label ? "#48BB78" : "white"}
       >
-        <span style={{ color: 'white' }}> Order by: </span>
-        {currentSortOrder?.label || 'Relevance'}
+        <span style={{ color: "white" }}> Order by: </span>
+        {currentSortOrder?.label || "Relevance"}
       </MenuButton>
       <MenuList>
         {sortOrders.map((order) => (
