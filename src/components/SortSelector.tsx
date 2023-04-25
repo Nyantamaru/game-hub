@@ -22,12 +22,8 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
 
   return (
     <Menu>
-      <MenuButton
-        as={Button}
-        rightIcon={<BsChevronDown />}
-        color={currentSortOrder?.label ? "#48BB78" : "white"}
-      >
-        <span style={{ color: "white" }}> Order by: </span>
+      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+        <span> Order by: </span>
         {currentSortOrder?.label || "Relevance"}
       </MenuButton>
       <MenuList>

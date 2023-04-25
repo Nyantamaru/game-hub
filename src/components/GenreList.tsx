@@ -42,7 +42,6 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
                 whiteSpace="normal"
                 textAlign="left"
                 fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
-                color={genre.id === selectedGenre?.id ? "#48BB78" : "white"}
                 onClick={() => onSelectGenre(genre)}
                 fontSize="lg"
                 variant="link"
