@@ -71,4 +71,4 @@ const App = () => {
 
 export default App;
 
-//goto: 35 Adding emojis
+//goto: 31 Fetching Games
