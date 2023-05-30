@@ -71,4 +71,4 @@ const App = () => {
 
 export default App;
 
-//goto: 32 removing duplicated interfaces
+//goto: 35 Implementing Infinite Scroll
