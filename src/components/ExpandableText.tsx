@@ -24,7 +24,6 @@ const ExpandableText = ({ children }: Props) => {
         colorScheme="yellow"
         onClick={() => setExpanded(!expanded)}
       >
-        {" "}
         {expanded ? "Show Less" : "Read More"}
       </Button>
     </Text>
